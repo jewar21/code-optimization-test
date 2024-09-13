@@ -56,3 +56,20 @@ You must follow the **SDLC process** to refactor the code:
    - Once you complete the refactorization, push your changes to your forked repository.
    - Create a pull request (PR) to the original repository, explaining the improvements you made and how you followed the **SDLC** approach.
 
+Documentacion:
+
+quiz realizado el 9/13/2024 por Luis Jose -192239 y Sergio Diaz- 192357
+
+Se hizo reafactorizacion al codigo stogare añadiendo: 
+ -2 arrays para guardar tanto los valores de precio como los valores de la cantidad de objetos vendidos
+ -Se añadio un for que funcionara para calcular el total de la venta
+
+ Se refactorizo en ageValidation:
+  -Se agrego una constante para definir los limites de edad
+  -Se añadio un scanner para que el usuario pueda ingresar su edad
+  -Un if adicional para los casos en que se digiten valores menores a 0
+
+Se refactorizo en TaxCalculation:
+ -Los nombres para TAX_RATE_HIGH, TAX_RATE_LOW y TAX_THRESHOLD añadiendo sus respectivos valores
+ -Se creo un array que almacenara el valor de los productos
+ -Se reemplazaron todos los valores magicos

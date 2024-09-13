@@ -1,16 +1,22 @@
 public class Store {
     public static void main(String[] args) {
-        int p1 = 15;
-        int p2 = 10;
-        int p3 = 5;
+ 
+        /*Se crea un array para el producto */
+        int[] PrecioProductos = {13,3,5};
 
-        int total1 = p1 * 2;
-        int total2 = p2 * 3;
-        int total3 = p3 * 4;
+        /*Se crea el array cantidad de productos
+         para verificar cuantos productos se venden*/
 
-        int totalSales = total1 + total2 + total3;
+        int[] CantidadProductos = {2,3,4};
 
-        if (totalSales > 50) {
+        int totalVentas=0; 
+
+        /*Se hace el calculo para verificar la cantidad de productos vendidos */
+        for(int i=0; i< PrecioProductos.length;i++){
+            totalVentas += PrecioProductos[i]*CantidadProductos[i];
+        }
+
+        if (totalVentas > 50) {
             System.out.println("Good sales performance");
         } else {
             System.out.println("Low sales performance");
