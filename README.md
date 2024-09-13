@@ -56,3 +56,21 @@ You must follow the **SDLC process** to refactor the code:
    - Once you complete the refactorization, push your changes to your forked repository.
    - Create a pull request (PR) to the original repository, explaining the improvements you made and how you followed the **SDLC** approach.
 
+Documentación:
+Quiz realizado por:
+Sergio Diaz - 192357
+Luis Lemus - 192239
+
+Se hizo refactorizacion al codigo storage añadiendo:
+   -2 arrays para guardar tanto los valores de precio como los valores de la cantidad de objetos vendidos
+   -Se añadio un for que funcionara para calcular el total de la venta
+
+Se hizo refactorizacion al codigo AgeValidation añadiendo:
+   -constantes para definir limites de edad
+   -scanner para que el usuario pueda ingresar su edad
+   -un if adicional para los casos en que se digiten valores menores a 0
+
+Se hizo refactorizacion al codigo TaxCalculation añadiendo:
+   -Los nombres para TAX_RATE_HIGH, TAX_RATE_LOW, TAX_THRESHOLD añadiendo sus respectivos valores
+   -Se creó un array que almacenara el valor de los productos
+   -Se reemplazaron todos los valores magicos
