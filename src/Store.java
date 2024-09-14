@@ -24,4 +24,4 @@ public class Store {
             System.out.println("Low sales performance");
         }
     }
-}
+} 
