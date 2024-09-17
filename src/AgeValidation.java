@@ -2,14 +2,15 @@ import java.util.Scanner;
 
 public class AgeValidation {
     public static void main(String[] args) {
-        final int AGELIMITD = 18;
+
+        final int AGELIMIT = 18;
         Scanner input = new Scanner(System.in);
         int age = input.nextInt();
-        if (age> AGELIMITD) {
+        if (age> AGELIMIT) {
             System.out.println("Access granted");
         }
         
-        else if (age < AGELIMITD && age > AGELIMITD) {
+        else if (age < AGELIMIT && age > AGELIMIT) {
             System.out.println("Access denied");
         }
         else{
