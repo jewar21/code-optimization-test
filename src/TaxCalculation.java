@@ -3,39 +3,53 @@ import java.util.Scanner;
 public class TaxCalculation {
     public static void main(String[] args) {
 
-        //Definición de constantes
-        final int HIG_TAX = 50;
-        final double percentageConverter = 0.01;
+        final int TAX_THRESHOLD = 50;
+        final double TAX_RATE_HIGH = 0.10;
+        final double TAX_RATE_LOW = 0.15;
+
+        int[] products;
+        double[] taxes;
+        double taxesSum = 0;
         
         try (Scanner scan = new Scanner(System.in)) {
+            
+            System.out.println("Ingresa la cantidad de productos");
+            int productsAmount = scan.nextInt();
+            products = new int[productsAmount];
+            taxes = new double[productsAmount];
 
-            //Se le pide al usuario ingresar los datos
-            System.out.println("Ingresa el valor del primer producto");
-            int productPrice1 = scan.nextInt();
+            for (int i = 0; i < products.length; i++) {
+                System.out.println("Ingresa el precio del producto " + (i+1));
+                products[i] = scan.nextInt();
 
-            System.out.println("Ingresa el porcentaje de impuesto");
-            int taxPercentage1 = scan.nextInt();
+                int taxOption;
 
-            System.out.println("Ingresa el valor del segundo producto");
-            int productPrice2 = scan.nextInt();
+                do { 
+                    System.out.println("\n1 = impuesto es alto (15%)");
+                    System.out.println("2 = impuesto es bajo (10%)");
+                    taxOption = scan.nextInt();
 
-            System.out.println("Ingresa el porcentaje de impuesto");
-            int taxPercentage2 = scan.nextInt();
+                    switch (taxOption) {
+                        case 1:
+                            taxes[i] = TAX_RATE_HIGH;
+                            break;
+                        case 2:
+                            taxes[i] = TAX_RATE_LOW;
+                            break;
+                        default:
+                            System.out.println("Opción inválida");
+                            break;
+                    }
+                } while ((taxOption != 1) && (taxOption != 2));
 
-            //Se hacen las operaciones para conocer el valor del impuesto
-            double tax1 = productPrice1 * taxPercentage1 * percentageConverter;
-            double tax2 = productPrice2 * taxPercentage2 * percentageConverter;
-            double totalTax = tax1 + tax2;
-
-            //Se hace un informe del impuesto
-            System.out.println("\nTax value: $" + totalTax);
-
-            //Se verifica si es alto o bajo según la constante
-            if (totalTax >= HIG_TAX) {
-                System.out.println("Hig tax");
+                taxesSum += products[i] * taxes[i];
+            }
+            System.out.println("El valor de los impuestos es de: $" + taxesSum);
+            if (taxesSum > TAX_THRESHOLD){
+                System.out.println("El impuesto sobrepasa el umbral");
             }
             else {
-                System.out.println("Low tax");
+                System.out.println("El impuesto no sobrepasa el umbral");
             }
         }
     }
