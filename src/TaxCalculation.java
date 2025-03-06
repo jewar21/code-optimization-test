@@ -10,6 +10,7 @@ public class TaxCalculation {
             System.out.println("High total tax: " + totalTax);
         } else {
             System.out.println("Low tax");
+            
         }
     }
 }
