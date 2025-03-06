@@ -56,3 +56,11 @@ You must follow the **SDLC process** to refactor the code:
    - Once you complete the refactorization, push your changes to your forked repository.
    - Create a pull request (PR) to the original repository, explaining the improvements you made and how you followed the **SDLC** approach.
 
+## Documentation
+
+En el ejercicio 1 se modificaron los valores mágicos y se estableció un límite para el estado de las ventas
+Además se usaron arreglos para guardar los precios y las cantidades de los productos
+
+En el ejercicio 2 se estableció un límite de edad válida para verificar que se ingrese un valor positivo
+Y otro límite para verificar si se es mayor de edad luego con loa estructura if-else
+
